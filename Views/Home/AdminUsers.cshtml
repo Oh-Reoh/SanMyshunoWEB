@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link rel="stylesheet" href="/css/AdminHome.css">
+<link rel="stylesheet" href="/css/userManagement.css">
+<script src="/js/userManagement.js"></script>
+
+<div class="admin-home-container">
+    <!-- Main Feed -->
+    <div class="feed-container">
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button id="homeownersBtn" class="toggle-btn active">Homeowners</button>
+            <button id="staffBtn" class="toggle-btn">Staff</button>
+        </div>
+
+        <!-- Homeowners List -->
+        <div id="homeownersList" class="list-container active">
+            <div class="list-item">
+                <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Homeowner">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-name">Homeowner Name</div>
+                        <div class="item-info">House No. 7, Blk 2, Iron Street</div>
+                        <div class="item-info">homeowner@gmail.com</div>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="delete-btn">
+                        <img src="/images/delete-icon.png" alt="Delete">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Staff List -->
+        <div id="staffList" class="list-container">
+            <div class="list-item">
+                <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Staff">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-name">Staff Name</div>
+                        <div class="item-info">Maintenance</div>
+                        <div class="item-info">staff@gmail.com</div>
+                        <div class="item-info">Contact number</div>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="delete-btn">
+                        <img src="/images/delete-icon.png" alt="Delete">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Staff Button (only for staff tab) -->
+        <button class="add-user-btn" id="addStaffBtn">
+            <img src="/images/addStaff-icon.png" alt="Add Staff">
+        </button>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-container">
+        <h2 class="sidebar-title">Homeowner Account Requests</h2>
+
+        <div class="request-item">
+            <div class="request-name">Homeowner Name</div>
+            <div class="request-info">House No. 7, Blk 2, Iron Street</div>
+            <div class="request-actions">
+                <button class="delete-btn">Delete</button>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+
+        <div class="request-item">
+            <div class="request-name">Homeowner Name</div>
+            <div class="request-info">House No. 7, Blk 2, Iron Street</div>
+            <div class="request-actions">
+                <button class="delete-btn">Delete</button>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Registering Staff -->
+<div class="modal-overlay" id="registerModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Register</span> a Staff</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="staffName" class="modal-input" placeholder="Full Name" />
+            <input type="text" id="staffContact" class="modal-input" placeholder="Contact" />
+            <input type="text" id="staffDept" class="modal-input" placeholder="Department" />
+            <input type="email" id="staffEmail" class="modal-input" placeholder="Email" />
+            <input type="password" id="staffPassword" class="modal-input" placeholder="Password" />
+            <span class="modal-error" id="modalError">Please fill in all fields.</span>
+        </div>
+        <div class="modal-footer">
+            <button class="post-btn" id="registerSubmit">Register</button>
+        </div>
+    </div>
+</div>

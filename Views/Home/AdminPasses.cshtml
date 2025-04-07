@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link rel="stylesheet" href="/css/AdminHome.css">
+<link rel="stylesheet" href="/css/Passes.css">
+<script src="/js/passes.js"></script>
+
+<div class="admin-home-container">
+    <!-- LEFT: Main Feed -->
+    <div class="feed-container">
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button id="visitorsBtn" class="toggle-btn active">Visitors</button>
+            <button id="vehiclesBtn" class="toggle-btn">Vehicles</button>
+        </div>
+
+        <!-- Visitors List -->
+        <div id="visitorsList" class="list-container active">
+            <div class="list-item">
+                <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Visitor">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-name">Visitor name</div>
+                        <div class="item-date">
+                            <span class="label-black">Visit date:</span>
+                            <span class="item-value">April 29, 2025</span>
+                        </div>
+                        <div class="item-owner">
+                            <span class="label-black">Registered by:</span>
+                            <span class="item-value">Homeowner name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="delete-btn">
+                        <img src="/images/delete-icon.png" alt="Delete">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicles List -->
+        <div id="vehiclesList" class="list-container">
+            <div class="list-item">
+                <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Vehicle">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-name">Vehicle Plate ABC-1234</div>
+                        <div class="item-owner">
+                            <span class="label-black">Requested by:</span>
+                            <span class="item-value">Homeowner name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="delete-btn">
+                        <img src="/images/delete-icon.png" alt="Delete">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT: Sidebar (Passes Requests) -->
+    <div class="sidebar-container">
+        <h2 class="sidebar-title">Passes Requests</h2>
+
+        <!-- Visitor Request -->
+        <div class="request-item">
+            <div class="request-details">
+                <div class="request-name">Visitor name</div>
+                <div class="request-date">
+                    <span class="label-black">Visit date:</span>
+                    <span class="item-value">April 29, 2025</span>
+                </div>
+                <div class="request-owner">
+                    <span class="label-black">Requested by:</span>
+                    <span class="item-value">Homeowner name</span>
+                </div>
+            </div>
+            <div class="request-actions">
+                <button class="delete-btn">Delete</button>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+
+        <!-- Vehicle Request -->
+        <div class="request-item">
+            <div class="request-details">
+                <div class="request-name">Vehicle Plate ABC-1234</div>
+                <div class="request-owner">
+                    <span class="label-black">Requested by:</span>
+                    <span class="item-value">Homeowner name</span>
+                </div>
+            </div>
+            <div class="request-actions">
+                <button class="delete-btn">Delete</button>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>

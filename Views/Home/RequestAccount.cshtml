@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/Start.cshtml";
+}
+
+<link rel="stylesheet" href="/css/requestAccount.css">
+<div class="request-account-page">
+    <div id="notification" class="notification" style="display:none;">
+        <div class="notification-text">
+            Your account is still being processed. You will receive an email notification once your request has been approved.
+        </div>
+    </div>
+    <div class="request-container">
+        <div class="request-header">
+            <h2><span>Request</span> your homeowner account</h2>
+        </div>
+        <form id="requestForm">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Contact" required>
+            </div>
+            <div class="address-fields">
+                <div class="address-field">
+                    <input type="text" class="form-control" placeholder="House No." required>
+                </div>
+                <div class="address-field">
+                    <input type="text" class="form-control" placeholder="Block" required>
+                </div>
+                <div class="address-field">
+                    <input type="text" class="form-control" placeholder="Street" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="request-btn">Request</button>
+            <div class="login-link">
+                <a href="/">Already Have An Account?</a>
+            </div>
+        </form>
+    </div>
+</div>

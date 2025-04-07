@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link rel="stylesheet" href="/css/AdminHome.css">
+<script src="/js/createPost.js"></script>
+<script src="/js/comments.js"></script>
+<div class="admin-home-container">
+    <!-- Main Feed -->
+    <div class="feed-container">
+        <!-- Create Post -->
+        <div class="create-post" id="createPostTrigger">
+            <div class="post-avatar">
+                <img src="/images/profile-icon.png" alt="Admin">
+            </div>
+            <input type="text" class="post-input" placeholder="Announce something to your community" readonly>
+        </div>
+
+        <!-- Posts -->
+        <div class="feed-container" id="feedContainer">
+            <!-- This is where new posts will be inserted -->
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-container">
+        <button class="create-poll-btn">Create Poll/Survey</button>
+
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-info">
+                    <h3>Question</h3>
+                    <div class="question-responses">7 Responses</div>
+                </div>
+                <button class="delete-question">
+                    <img src="/images/delete-icon.png" alt="Delete">
+                </button>
+            </div>
+
+            <div class="question-item">
+                <div class="question-info">
+                    <h3>Question</h3>
+                    <div class="question-responses">7 Responses</div>
+                </div>
+                <button class="delete-question">
+                    <img src="/images/delete-icon.png" alt="Delete">
+                </button>
+            </div>
+
+            <div class="question-item">
+                <div class="question-info">
+                    <h3>Question</h3>
+                    <div class="question-responses">7 Responses</div>
+                </div>
+                <button class="delete-question">
+                    <img src="/images/delete-icon.png" alt="Delete">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="postModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Announce</span> a post</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-author">
+            <div class="post-avatar">
+                <img src="/images/profile-icon.png" alt="Admin">
+            </div>
+            <div class="modal-author-info">Admin Name</div>
+        </div>
+        <div class="modal-body">
+            <textarea class="modal-textarea" placeholder="Start writing here..." id="postContent"></textarea>
+        </div>
+        <div class="modal-file-upload">
+            <button class="file-upload-btn" id="fileUploadBtn">
+                <img src="/images/upload-icon.png" alt="Upload"> Upload file
+            </button>
+        </div>
+        <div class="modal-footer">
+            <button class="post-btn" id="submitPost">Post</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="commentModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Comment</span> on this post</h2>
+            <button class="modal-close" id="closeCommentModal">&times;</button>
+        </div>
+
+        <!-- Original post content -->
+        <div class="modal-body">
+            <div class="modal-author" style="padding: 0;">
+                <div class="post-avatar">
+                    <img src="/images/profile-icon.png" alt="Admin" id="originalPostAvatar">
+                </div>
+                <div class="modal-author-info">
+                    <div id="originalPostAuthor" style="font-weight: bold;">Admin Name</div>
+                    <div class="post-date" id="originalPostDate">April 4, 2025</div>
+                </div>
+            </div>
+
+            <div id="originalPostContent">
+                <!-- Original post content will be inserted here -->
+            </div>
+
+            <!-- Comment list -->
+            <div class="comment-list" id="commentList">
+                <!-- Comments will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Comment input -->
+        <div class="comment-input-wrapper">
+            <input type="text" class="comment-input" id="newCommentInput" placeholder="Write a comment...">
+            <button class="comment-btn" id="submitComment">Comment</button>
+        </div>
+    </div>
+</div>
+
+

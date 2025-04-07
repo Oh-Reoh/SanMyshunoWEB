@@ -1,0 +1,305 @@
+﻿/* === Container Layout === */
+.content-area {
+    background: white;
+}
+
+.admin-home-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.feed-container {
+    flex: 1;
+    margin-right: 320px;
+}
+
+.sidebar-container {
+    width: 300px;
+    position: fixed;
+    right: calc((100% - 1200px) / 8);
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* === Toggle Buttons === */
+.toggle-buttons {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.toggle-btn {
+    padding: 8px 24px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+    .toggle-btn:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .toggle-btn:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .toggle-btn.active {
+        background-color: #e85a5a;
+        color: white;
+        border-color: #e85a5a;
+    }
+
+/* === List Containers === */
+.list-container {
+    display: none;
+    width: 100%;
+}
+
+    .list-container.active {
+        display: block;
+    }
+
+/* === List Items === */
+.list-item {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C2C2C2;
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+    .post-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.item-info {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+.item-actions .delete-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+    .item-actions .delete-btn:hover {
+        color: #e85a5a;
+    }
+
+/* === Sidebar Requests === */
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20pxadd
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.request-item {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.request-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.request-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.delete-btn, .confirm-btn {
+    flex: 1; /* Equal width */
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #fff;
+    border: 2px solid black;
+    color: black;
+}
+
+
+.confirm-btn {
+    background-color: #e85a5a;
+    border: 1px solid #e85a5a;
+    color: white;
+}
+
+
+.confirm-btn:hover {
+    background-color: #d64545;
+}
+
+
+/* === Modal === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+    .modal-overlay.active {
+        display: flex;
+    }
+
+.modal {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 0;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+    .modal-title span {
+        color: #e85a5a;
+    }
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    font-family: 'Inter', sans-serif;
+}
+
+    .modal-input.error {
+        border: 1px solid red;
+    }
+
+.modal-error {
+    color: red;
+    font-size: 14px;
+    display: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.post-btn {
+    background-color: #e85a5a;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+/* === Floating Add Button === */
+.add-user-btn {
+    position: absolute;
+    top: 5px;
+    right: 320px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+    .add-user-btn img {
+        width: 32px;
+        height: 32px;
+    }
