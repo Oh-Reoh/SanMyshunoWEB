@@ -53,5 +53,10 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+
+        public IActionResult AdminFacilities()
+        {
+            return View();
+        }
     }
 }

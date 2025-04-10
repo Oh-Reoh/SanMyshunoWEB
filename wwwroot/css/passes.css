@@ -32,7 +32,7 @@
 }
 
 .toggle-btn {
-    padding: 10px 20px;
+    padding: 8px 24px;
     border: 1px solid #ddd;
     background-color: #fff;
     cursor: pointer;
@@ -40,16 +40,6 @@
     transition: all 0.3s ease;
     font-family: 'Inter', sans-serif;
 }
-
-    .toggle-btn:first-child {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-
-    .toggle-btn:last-child {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
 
     .toggle-btn.active {
         background-color: #e85a5a;
@@ -136,7 +126,7 @@
         }
 
         .item-actions .delete-btn:hover img {
-            opacity: 1;
+            opacity: 0.7;
         }
 
 /* Sidebar title */
@@ -151,7 +141,6 @@
 /* Passes Requests (Sidebar) */
 .request-item {
     background-color: white;
-    border-radius: 4px;
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -181,36 +170,35 @@
     gap: 10px;
 }
 
-.delete-btn, .confirm-btn {
+.request-item .delete-btn, .request-item .confirm-btn {
     flex: 1;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 8px 24px;
+    font-size: 15px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
-.delete-btn {
+.request-item .delete-btn {
     background-color: #fff;
-    border: 2px solid #000; /* Thicker and blacker */
-    color: #000;
-    font-weight: 500;
+    border: 1px solid black;
+    color: black;
 }
 
 
-.confirm-btn {
+.request-item .confirm-btn {
     background-color: #e85a5a;
-    border: none;
+    border: 1px solid #e85a5a;
     color: white;
 }
 
-.delete-btn:hover {
+
+.request-item .delete-btn:hover {
     background-color: #f5f5f5;
 }
 
-.confirm-btn:hover {
+.request-item .confirm-btn:hover {
     background-color: #d64545;
 }
 

@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="/css/AdminHome.css">
 <script src="/js/createPost.js"></script>
 <script src="/js/comments.js"></script>
+<script src="/js/createPoll.js"></script>
 <div class="admin-home-container">
     <!-- Main Feed -->
     <div class="feed-container">
@@ -27,36 +28,9 @@
         <button class="create-poll-btn">Create Poll/Survey</button>
 
         <div class="question-list">
-            <div class="question-item">
-                <div class="question-info">
-                    <h3>Question</h3>
-                    <div class="question-responses">7 Responses</div>
-                </div>
-                <button class="delete-question">
-                    <img src="/images/delete-icon.png" alt="Delete">
-                </button>
-            </div>
-
-            <div class="question-item">
-                <div class="question-info">
-                    <h3>Question</h3>
-                    <div class="question-responses">7 Responses</div>
-                </div>
-                <button class="delete-question">
-                    <img src="/images/delete-icon.png" alt="Delete">
-                </button>
-            </div>
-
-            <div class="question-item">
-                <div class="question-info">
-                    <h3>Question</h3>
-                    <div class="question-responses">7 Responses</div>
-                </div>
-                <button class="delete-question">
-                    <img src="/images/delete-icon.png" alt="Delete">
-                </button>
-            </div>
+            <!-- Questions will be added dynamically here -->
         </div>
+
     </div>
 </div>
 
@@ -123,4 +97,32 @@
     </div>
 </div>
 
+<!-- Modal for Creating Poll/Survey -->
+<div class="modal-overlay" id="pollModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Create</span> a poll/survey</h2>
+            <button class="modal-close" id="closePollModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <textarea class="modal-textarea" placeholder="Ask a question..." id="pollQuestion"></textarea>
 
+            <div class="poll-options" id="pollOptions">
+                <div class="poll-option">
+                    <input type="radio" disabled>
+                    <input type="text" class="option-input" placeholder="Option 1">
+                </div>
+            </div>
+
+            <div class="add-option-container">
+                <button class="add-option-btn" id="addOptionBtn">
+                    <input type="radio" disabled>
+                    <span>Add option</span>
+                </button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="post-btn" id="publishPoll">Publish</button>
+        </div>
+    </div>
+</div>
