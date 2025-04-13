@@ -1,5 +1,4 @@
-﻿/* === Container Layout === */
-.content-area {
+﻿.content-area {
     background: white;
 }
 
@@ -8,27 +7,28 @@
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 .feed-container {
     flex: 1;
-    margin-right: 320px;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .sidebar-container {
     width: 300px;
-    position: fixed;
-    right: calc((100% - 1200px) / 8);
-    overflow-y: auto;
+    flex-shrink: 0;
     padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
-/* === Toggle Buttons === */
+/* Toggle Buttons */
 .toggle-buttons {
     display: flex;
     margin-bottom: 20px;
-    gap: 8px;
+    gap: 10px;
 }
 
 .toggle-btn {
@@ -37,8 +37,8 @@
     background-color: #fff;
     cursor: pointer;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
     .toggle-btn.active {
@@ -47,7 +47,7 @@
         border-color: #e85a5a;
     }
 
-/* === List Containers === */
+/* List Containers */
 .list-container {
     display: none;
     width: 100%;
@@ -57,12 +57,10 @@
         display: block;
     }
 
-/* === List Items === */
+/* List Item (Visitors/Vehicles) */
 .list-item {
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    background-color: white;
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
@@ -101,9 +99,10 @@
     font-family: 'Inter', sans-serif;
 }
 
-.item-info {
+.item-date,
+.item-owner {
     font-size: 16px;
-    color: #666;
+    color: #888;
     font-family: 'Inter', sans-serif;
 }
 
@@ -130,7 +129,15 @@
             opacity: 0.7;
         }
 
-/* === Sidebar Requests === */
+    .item-actions select {
+        padding: 6px 12px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+
+/* Sidebar title */
 .sidebar-title {
     font-size: 18px;
     font-weight: 600;
@@ -139,6 +146,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Passes Requests (Sidebar) */
 .request-item {
     background-color: white;
     padding: 15px;
@@ -146,15 +154,19 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+.request-details {
+    margin-bottom: 15px;
+}
+
 .request-name {
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
-    color: #333;
 }
 
-.request-info {
+.request-date,
+.request-owner {
     font-size: 16px;
     color: #666;
     margin-bottom: 3px;
@@ -164,10 +176,9 @@
 .request-actions {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
 }
 
-.request-item .delete-btn, .confirm-btn {
+.request-item .delete-btn, .request-item .confirm-btn {
     flex: 1;
     padding: 8px 24px;
     font-size: 16px;
@@ -175,7 +186,6 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    border-radius: 0;
 }
 
 .request-item .delete-btn {
@@ -200,107 +210,13 @@
     background-color: #d64545;
 }
 
-
-/* === Modal === */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.label-black {
+    color: #000;
+    font-weight: 500;
+    margin-right: 5px;
 }
 
-    .modal-overlay.active {
-        display: flex;
-    }
-
-.modal {
-    background-color: white;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-title {
-    font-size: 20px;
-    font-family: 'Inter', sans-serif;
-}
-
-    .modal-title span {
-        color: #e85a5a;
-    }
-
-.modal-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #888;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.modal-input {
-    padding: 10px;
+.item-value {
+    color: #666;
     font-size: 16px;
-    border: 1px solid #ccc;
-    font-family: 'Inter', sans-serif;
 }
-
-    .modal-input.error {
-        border: 1px solid red;
-    }
-
-.modal-error {
-    color: red;
-    font-size: 16px;
-    display: none;
-    font-family: 'Inter', sans-serif;
-}
-
-.modal-footer {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.post-btn {
-    background-color: #e85a5a;
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-}
-
-/* === Floating Add Button === */
-.add-user-btn {
-    position: absolute;
-    top: 5px;
-    right: 320px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-    .add-user-btn img {
-        width: 32px;
-        height: 32px;
-    }

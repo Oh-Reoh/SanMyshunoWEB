@@ -76,7 +76,7 @@
     border: none;
     background-color: transparent;
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
     font-family: 'Inter', sans-serif;
 }
@@ -170,7 +170,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     transition: background-color 0.2s;
 }
@@ -199,7 +199,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -262,7 +262,7 @@
     background-color: #e85a5a;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 16px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -298,7 +298,7 @@
 }
 
 .question-responses {
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
     font-family: 'Inter', sans-serif;
 }
@@ -419,7 +419,7 @@
     resize: none;
     padding: 10px 0;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
     .modal-textarea:focus {
@@ -436,7 +436,7 @@
     background: none;
     border: 1px solid #ddd;
     padding: 8px 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
@@ -643,7 +643,7 @@
     padding: 12px 15px;
     border: 1px solid #ddd;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Inter", sans-serif;
     height: 42px;
 }
@@ -655,7 +655,7 @@
     padding: 0 20px;
     height: 42px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Inter", sans-serif;
     transition: background-color 0.3s;
     min-width: 100px;
@@ -690,11 +690,11 @@
 }
 
 #commentModal .comment-author {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #commentModal .comment-text {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #commentModal .modal-author-info {
@@ -762,7 +762,7 @@
     padding: 10px 0;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
     transition: color 0.3s;
 }

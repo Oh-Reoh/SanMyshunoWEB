@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/Staff.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/transactions.css" />
+}
+
+@section Scripts {
+    <script src="/js/transactions.js"></script>
+}
+
+<div class="transactions-container">
+    <!-- Filter Dropdown -->
+    <div class="transactions-header">
+        <div class="dropdown-wrapper">
+            <button class="dropdown-toggle" id="filterToggle">
+                <img src="/images/transactionOption-icon.png" alt="Filter Icon" />
+            </button>
+            <div class="dropdown-menu">
+                <div class="filter-option" data-type="Facility">Facility</div>
+                <div class="filter-option" data-type="Service">Service</div>
+                <div class="filter-option" data-type="Dues">Dues</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transaction List -->
+    <div class="transactions-list">
+        <div class="transaction-item" data-type="Facility">
+            <div class="transaction-details">
+                <p><strong>Payment method:</strong> Gcash</p>
+                <p><strong>Paid by:</strong> Homeowner name</p>
+                <p><strong>Paid to:</strong> Facility</p>
+                <p><strong>Date paid:</strong> April 2, 2025</p>
+            </div>
+            <div class="transaction-amount">+500</div>
+        </div>
+
+        <div class="transaction-item" data-type="Service">
+            <div class="transaction-details">
+                <p><strong>Payment method:</strong> PayMaya</p>
+                <p><strong>Paid by:</strong> Homeowner name</p>
+                <p><strong>Paid to:</strong> Service</p>
+                <p><strong>Date paid:</strong> April 2, 2025</p>
+            </div>
+            <div class="transaction-amount">+500</div>
+        </div>
+    </div>
+</div>

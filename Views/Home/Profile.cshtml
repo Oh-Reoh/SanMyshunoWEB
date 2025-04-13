@@ -1,0 +1,73 @@
+﻿@{
+    string layout = "~/Views/Shared/Admin.cshtml";
+
+    if (User.IsInRole("Staff"))
+    {
+        layout = "~/Views/Shared/Staff.cshtml";
+    }
+    else if (User.IsInRole("Homeowner"))
+    {
+        layout = "~/Views/Shared/Homeowner.cshtml";
+    }
+
+    Layout = layout;
+}
+
+<link rel="stylesheet" href="/css/profile.css">
+<script src="/js/profile.js"></script>
+
+<div class="profile-layout">
+    <!-- LEFT: Sidebar Buttons -->
+    <div class="sidebar-container">
+        <h2 class="sidebar-title">Account Settings</h2>
+        <div class="tab-buttons-vertical">
+            <button id="personalInfoBtn" class="tab-btn-vertical active">
+                <img src="/images/personalInformation-icon.png" alt="Personal Information Icon" />
+                Personal Information
+            </button>
+            <button id="passwordBtn" class="tab-btn-vertical">
+                <img src="/images/profilePassword-icon.png" alt="Password Icon" />
+                Password
+            </button>
+        </div>
+    </div>
+
+    <!-- RIGHT: Content Panel -->
+    <div class="feed-container">
+        <!-- PERSONAL INFO -->
+        <div id="personalInfoPanel" class="tab-content active">
+            <div class="profile-card">
+                <label for="profileImageUpload" class="profile-avatar-label">
+                    <img id="profilePreview" class="profile-avatar" src="/images/profile-icon.png" alt="Profile Picture" />
+                    <input type="file" id="profileImageUpload" accept="image/*" hidden />
+                </label>
+
+                <form class="profile-form">
+                    <div class="form-fields">
+                        <input type="text" placeholder="Admin Name" />
+                        <input type="text" placeholder="Contact" />
+                        <input type="email" placeholder="Email" />
+                        @if (User.IsInRole("Homeowner"))
+                        {
+                            <input type="text" placeholder="Address" />
+                        }
+                    </div>
+
+                    <button type="submit" class="save-btn">Save</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div id="passwordPanel" class="tab-content">
+            <div class="profile-card">
+                <form class="profile-form">
+                    <input type="password" placeholder="Current password" />
+                    <input type="password" placeholder="New password" />
+                    <input type="password" placeholder="Confirm password" />
+                    <button type="submit" class="save-btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

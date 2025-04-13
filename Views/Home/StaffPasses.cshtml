@@ -1,8 +1,9 @@
 ﻿@{
-    Layout = "~/Views/Shared/Admin.cshtml";
+    Layout = "~/Views/Shared/Staff.cshtml";
+    ViewData["Title"] = "Passes Management";
 }
 
-<link rel="stylesheet" href="/css/Passes.css">
+<link rel="stylesheet" href="/css/passes.css">
 <script src="/js/passes.js"></script>
 
 <div class="admin-home-container">
@@ -16,9 +17,11 @@
 
         <!-- Visitors List -->
         <div id="visitorsList" class="list-container active">
-            <!-- visitors will be added dynamically here , JUST ERASE DIV LIST-ITEM IF MAGBUTANG NAKA BACKEND OKKKEEE??? -->
             <div class="list-item">
                 <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Visitor">
+                    </div>
                     <div class="item-details">
                         <div class="item-name">Visitor name</div>
                         <div class="item-date">
@@ -41,9 +44,11 @@
 
         <!-- Vehicles List -->
         <div id="vehiclesList" class="list-container">
-            <!-- vehicles will be added dynamically here , JUST ERASE DIV LIST-ITEM IF MAGBUTANG NAKA BACKEND OKKKEEE??? -->
             <div class="list-item">
                 <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Vehicle">
+                    </div>
                     <div class="item-details">
                         <div class="item-name">Vehicle Plate ABC-1234</div>
                         <div class="item-owner">
@@ -65,7 +70,7 @@
     <div class="sidebar-container">
         <h2 class="sidebar-title">Passes Requests</h2>
 
-        <!-- Visitor Request -->
+        <!-- Sample Requests -->
         <div class="request-item">
             <div class="request-details">
                 <div class="request-name">Visitor name</div>
@@ -73,21 +78,6 @@
                     <span class="label-black">Visit date:</span>
                     <span class="item-value">April 29, 2025</span>
                 </div>
-                <div class="request-owner">
-                    <span class="label-black">Requested by:</span>
-                    <span class="item-value">Homeowner name</span>
-                </div>
-            </div>
-            <div class="request-actions">
-                <button class="delete-btn">Delete</button>
-                <button class="confirm-btn">Confirm</button>
-            </div>
-        </div>
-
-        <!-- Vehicle Request -->
-        <div class="request-item">
-            <div class="request-details">
-                <div class="request-name">Vehicle Plate ABC-1234</div>
                 <div class="request-owner">
                     <span class="label-black">Requested by:</span>
                     <span class="item-value">Homeowner name</span>

@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/Staff.cshtml";
+    ViewData["Title"] = "Staff Dashboard";
+}
+
+<!-- Base layout styles -->
+<link rel="stylesheet" href="/css/AdminHome.css">
+<!-- Staff-specific overrides -->
+<link rel="stylesheet" href="/css/staffHome.css">
+<!-- Optional JS functionality -->
+<script src="/js/staffHome.js"></script>
+
+<div class="admin-home-container staff-home">
+    <!-- Feed Column -->
+    <div class="feed-container">
+        <h2 style="margin-bottom: 20px;">Community Feed</h2>
+
+        <!-- Example Post (read-only) -->
+        <div class="post-card">
+            <div class="post-header">
+                <div class="post-author">John Dela Cruz</div>
+                <div class="post-date">April 13, 2025</div>
+            </div>
+            <div class="post-content">
+                Please note the schedule of water interruption this weekend. Thank you!
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comment-section">
+                <div class="comment-item">
+                    <span class="comment-author">Maria Santos</span>
+                    <span class="comment-text">Thanks for the heads up!</span>
+                </div>
+                <div class="comment-item">
+                    <span class="comment-author">Mark Yulo</span>
+                    <span class="comment-text">Will this affect the whole tower?</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more post-card blocks here -->
+    </div>
+
+    <!-- Sidebar Column -->
+    <div class="sidebar-container">
+        <h3 style="margin-bottom: 15px;">Announcements</h3>
+
+        <div class="announcement-card">
+            Elevator inspection is scheduled for April 16 at 10:00 AM. Please avoid using Tower B elevators during that time.
+        </div>
+
+        <div class="announcement-card">
+            Deadline for vehicle sticker renewal is April 30.
+        </div>
+    </div>
+</div>

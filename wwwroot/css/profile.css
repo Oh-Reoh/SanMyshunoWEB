@@ -1,0 +1,147 @@
+﻿/* Main horizontal layout */
+.profile-layout {
+    display: flex;
+    align-items: flex-start; /* align top of sidebar and form */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 20px 0; /* removes top spacing that pushes form down */
+}
+
+/* Sidebar container */
+.sidebar-container {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Vertical tab buttons */
+.tab-buttons-vertical {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tab-btn-vertical {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left;
+}
+
+    .tab-btn-vertical img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .tab-btn-vertical.active {
+        background-color: #d9d9d9;
+        font-weight: bold;
+    }
+
+/* Right panel container */
+.feed-container {
+    flex: 1;
+    margin-top: 0; /* prevents spacing that causes misalignment */
+}
+
+/* Tab content panels */
+.tab-content {
+    display: none;
+    margin-top: 0; /* ensures alignment */
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+/* Profile card (image + form side by side) */
+.profile-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 30px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+/* Avatar */
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Form styles */
+.profile-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+    .profile-form input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+
+/* Save button */
+.save-btn {
+    background-color: #e85a5a;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+    .save-btn:hover {
+        background-color: #d64545;
+    }
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-avatar-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+    .profile-avatar-label:hover .profile-avatar {
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }

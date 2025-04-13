@@ -236,33 +236,34 @@
         }
 
         newItem.innerHTML = `
-            <div class="item-content">
-                <div class="post-avatar">
-                    <img src="${facilityData.imageUrl}" alt="Facility">
-                </div>
-                <div class="item-details">
-                    <div class="item-name">${facilityData.name}</div>
-                    <div class="item-info">Price per hour: ${facilityData.price}</div>
-                    <div class="item-info">Address: ${facilityData.address}</div>
-                    <div class="item-info">Status: ${facilityData.status}</div>
-                    <div class="item-info">Number of bookings: 0</div>
-                </div>
+        <div class="item-content">
+            <div class="post-avatar">
+                <img src="${facilityData.imageUrl}" alt="Facility">
             </div>
-            <div class="item-actions">
-                <button class="edit-btn">
-                    <img src="/images/edit-icon.png" alt="Edit">
-                </button>
-                <button class="delete-btn">
-                    <img src="/images/delete-icon.png" alt="Delete">
-                </button>
+            <div class="item-details">
+                <div class="item-name">${facilityData.name}</div>
+                <div class="item-info"><span class="info-label">Price per hour:</span> ${facilityData.price}</div>
+                <div class="item-info"><span class="info-label">Address:</span> ${facilityData.address}</div>
+                <div class="item-info"><span class="info-label">Status:</span> ${facilityData.status}</div>
+                <div class="item-info"><span class="info-label">Number of bookings:</span> 0</div>
             </div>
-        `;
+        </div>
+        <div class="item-actions">
+            <button class="edit-btn">
+                <img src="/images/edit-icon.png" alt="Edit">
+            </button>
+            <button class="delete-btn">
+                <img src="/images/delete-icon.png" alt="Delete">
+            </button>
+        </div>
+    `;
 
         // Add to the list
         if (facilitiesList) {
             facilitiesList.prepend(newItem);
         }
     }
+
 
     // Form validation
     function validateForm() {

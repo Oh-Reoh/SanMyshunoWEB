@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Myshuno</title>
+    <title>San Myshuno - Staff</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- ✅ Reusing admin styles and fonts -->
     <link rel="stylesheet" href="/css/Admin.css">
     <link rel="stylesheet" href="/css/fonts.css">
+
+    <!-- ✅ Reusing dropdown JS logic -->
     <script src="/js/dropDown.js"></script>
     <script src="/js/activeClasses.js"></script>
+
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <!-- Top Navigation Bar -->
@@ -19,27 +25,31 @@
             </div>
         </div>
         <div class="user-actions">
-            <button class="icon-button home-icon" id="homeIcon" onclick="window.location.href='/Home/AdminHome';">
+            <!-- Home Button -->
+            <button class="icon-button home-icon" id="homeIcon" onclick="window.location.href='/Home/StaffHome';">
                 <img src="/images/home-icon.png" alt="Home">
             </button>
+
+            <!-- Notification Bell -->
             <div class="notification-wrapper">
                 <button class="icon-button" id="notificationToggle">
                     <img src="/images/bell-icon.png" alt="Notifications">
                 </button>
                 <div id="notificationDropdown" class="notification-dropdown">
                     <div id="notificationList">
-                        <div class="notification-item">
-                            <div class="notification-title">No new notifications</div>
-                            <div class="notification-date"></div>
+                        <div class="notification-item no-notif">
+                            <div class="notification-title" style="text-align: center;">No new notifications</div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Profile -->
             <div class="profile-icon" id="profileIcon">
-                <img src="/images/profile-icon.png" alt="Admin">
+                <img src="/images/profile-icon.png" alt="Staff">
             </div>
 
+            <!-- Dropdown Menu -->
             <div class="dropdown">
                 <div class="dropdown-menu" id="userDropdownMenu">
                     <a href="/Home/Profile" class="dropdown-item">Profile</a>
@@ -51,38 +61,28 @@
 
     <!-- Main Container -->
     <div class="main-container">
-        <!-- Side Navigation - Always Open -->
+        <!-- Side Navigation -->
         <nav class="side-navbar">
-            <a href="/Home/AdminUsers" class="nav-item" id="usersActive">
-                <div class="nav-icon"><img src="/images/users-icon.png" alt="Users"></div>
-                <span>Users</span>
-            </a>
-            <a href="/Home/AdminFacilities" class="nav-item" id="facilityActive">
-                <div class="nav-icon"><img src="/images/facilities-icon.png" alt="Facilities"></div>
-                <span>Facilities</span>
-            </a>
-            <a href="/Home/AdminPasses" class="nav-item" id="passActive">
+            <a href="/Home/StaffPasses" class="nav-item" id="passActive">
                 <div class="nav-icon"><img src="/images/passes-icon.png" alt="Passes"></div>
                 <span>Passes</span>
             </a>
-            <a href="/Home/AdminServices" class="nav-item" id="servicesActive">
+            <a href="/Home/StaffServices" class="nav-item" id="servicesActive">
                 <div class="nav-icon"><img src="/images/services-icon.png" alt="Services"></div>
                 <span>Services</span>
             </a>
-            <a href="/Home/AdminFiles" class="nav-item">
-                <div class="nav-icon"><img src="/images/files-icon.png" alt="Files"></div>
-                <span>Files</span>
-            </a>
-            <a href="/Home/AdminTransactions" class="nav-item">
+            <a href="/Home/StaffTransactions" class="nav-item" id="transactionsActive">
                 <div class="nav-icon"><img src="/images/transactions-icon.png" alt="Transactions"></div>
                 <span>Transactions</span>
             </a>
         </nav>
 
-        <!-- Content Area -->
+        <!-- Main Content -->
         <div class="content-area">
             @RenderBody()
         </div>
     </div>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

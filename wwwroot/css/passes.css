@@ -101,7 +101,7 @@
 
 .item-date,
 .item-owner {
-    font-size: 14px;
+    font-size: 16px;
     color: #888;
     font-family: 'Inter', sans-serif;
 }
@@ -159,7 +159,7 @@
 
 .request-date,
 .request-owner {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-bottom: 3px;
     font-family: 'Inter', sans-serif;
@@ -173,7 +173,7 @@
 .request-item .delete-btn, .request-item .confirm-btn {
     flex: 1;
     padding: 8px 24px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -210,4 +210,5 @@
 
 .item-value {
     color: #666;
+    font-size: 16px;
 }

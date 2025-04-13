@@ -1,0 +1,26 @@
+﻿/* staffHome.css */
+/* Staff-specific tweaks for post/comment UI */
+
+/* Remove pointer events or styling from post actions */
+.staff-home .create-post,
+.staff-home .create-poll-btn,
+.staff-home .post-menu-container,
+.staff-home .dropdown-item {
+    display: none !important;
+}
+
+
+/* Dim the comment section if desired */
+.comment-section {
+    background-color: #f9f9f9;
+}
+
+/* Optional: Add a subtle badge that it's a view-only panel */
+.feed-container::before {
+    content: "Viewing in staff mode (read-only)";
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
