@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Shared/Homeowner.cshtml";
+}
+
+<link rel="stylesheet" href="/css/Admin.css">
+<link rel="stylesheet" href="/css/facilities.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/js/bookFacility.js"></script>
+
+<div class="admin-home-container">
+    <!-- Main Feed -->
+    <div class="feed-container full-width">
+        <!-- Facilities List -->
+        <div id="facilitiesList" class="list-container active">
+            <!-- Facilities will be added dynamically here -->
+        </div>
+    </div>
+</div>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Book</span> this facility</h2>
+            <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="facility-preview">
+                <div class="post-avatar" style="margin: 0 auto 15px auto;">
+                    <img id="facilityImage" src="/placeholder.svg" alt="Facility Image">
+                </div>
+                <div class="facility-details text-center" style="margin-bottom: 20px;">
+                    <div id="facilityName" class="item-name"></div>
+                    <div id="facilityPrice" class="item-info"></div>
+                    <div id="facilityAddress" class="item-info"></div>
+                </div>
+            </div>
+
+            <div class="booking-form">
+                <h3>Select time</h3>
+                <div class="time-selection" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                    <div style="flex: 1;">
+                        <select id="timeFrom" class="modal-input">
+                            <option value="">From</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                            <option value="20:00">08:00 PM</option>
+                        </select>
+                    </div>
+                    <div style="flex: 1;">
+                        <select id="timeUntil" class="modal-input">
+                            <option value="">Until</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                            <option value="20:00">08:00 PM</option>
+                            <option value="21:00">09:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <input type="text" id="bookingDate" class="modal-input" placeholder="Select Date">
+                </div>
+
+                <div style="margin-bottom: 5px;">
+                    <select id="paymentMethod" class="modal-input">
+                        <option value="">Payment Method</option>
+                        <option value="credit">Gcash</option>
+                        <option value="debit">PayMaya</option>
+                    </select>
+                </div>
+                <div class="modal-error" id="bookingError">Please fill in all required fields</div>
+
+                <div class="total-section" style="margin: 20px 0; font-size: 18px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Total:</span>
+                        <span id="totalAmount">₱0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="confirmBooking" class="post-btn">Book</button>
+        </div>
+    </div>
+</div>

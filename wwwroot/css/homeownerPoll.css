@@ -1,0 +1,75 @@
+﻿/* Additional styles for the homeowner poll functionality */
+.poll-question {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.poll-options {
+    margin-top: 30px;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+}
+
+    .poll-option input[type="radio"] {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+.option-label {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+/* Make question items more obviously clickable */
+.question-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+    .question-item:hover {
+        background-color: #f5f5f5;
+    }
+
+    .question-item:after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #777;
+        border-right: 2px solid #777;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    /* Style for answered polls */
+    .question-item.answered:after {
+        content: "✓";
+        border: none;
+        color: #4caf50;
+        font-size: 18px;
+        font-weight: bold;
+        transform: translateY(-50%);
+    }
+
+/* Sidebar header styles */
+.sidebar-header {
+    color: black;
+    padding: 16px;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 0;
+}
+
+    .sidebar-header h3 {
+        margin: 0;
+        font-weight: 500;
+    }

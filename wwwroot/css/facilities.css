@@ -162,6 +162,8 @@
 
 .modal-body {
     padding: 20px;
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 .file-upload {
@@ -234,3 +236,18 @@
     .post-btn:hover {
         background-color: #d64545;
     }
+
+.book-now-btn {
+    background-color: #f05454;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 145px;
+}
+
+    .book-now-btn:hover {
+        background-color: #e04444;
+}

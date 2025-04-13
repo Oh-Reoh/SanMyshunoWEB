@@ -135,8 +135,9 @@
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #333;
+    color: black;
     font-family: 'Inter', sans-serif;
+    padding: 16px;
 }
 
 .request-item {

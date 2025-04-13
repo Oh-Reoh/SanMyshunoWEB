@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Views/Shared/Homeowner.cshtml";
+}
+
+<link rel="stylesheet" href="/css/AdminHome.css">
+<link rel="stylesheet" href="/css/homeownerPoll.css">
+<script src="/js/comments.js"></script>
+<script src="/js/answerPoll.js"></script>
+<div class="admin-home-container">
+    <!-- Main Feed -->
+    <div class="feed-container">
+        <!-- Posts -->
+        <div class="feed-container" id="feedContainer">
+            <!-- This is where posts will be displayed -->
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar-header">
+            <h3>Available Polls/Surveys</h3>
+        </div>
+        <div class="question-list">
+            <!-- Questions will be added dynamically here -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Viewing and Commenting on Posts -->
+<div class="modal-overlay" id="commentModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Comment</span> on this post</h2>
+            <button class="modal-close" id="closeCommentModal">&times;</button>
+        </div>
+
+        <!-- Original post content -->
+        <div class="modal-body">
+            <div class="modal-author" style="padding: 0;">
+                <div class="post-avatar">
+                    <img src="/images/profile-icon.png" alt="Admin" id="originalPostAvatar">
+                </div>
+                <div class="modal-author-info">
+                    <div id="originalPostAuthor" style="font-weight: bold;">Admin Name</div>
+                    <div class="post-date" id="originalPostDate">April 4, 2025</div>
+                </div>
+            </div>
+
+            <div id="originalPostContent">
+                <!-- Original post content will be inserted here -->
+            </div>
+
+            <!-- Comment list -->
+            <div class="comment-list" id="commentList">
+                <!-- Comments will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Comment input -->
+        <div class="comment-input-wrapper">
+            <input type="text" class="comment-input" id="newCommentInput" placeholder="Write a comment...">
+            <button class="comment-btn" id="submitComment">Comment</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Answering Poll/Survey -->
+<div class="modal-overlay" id="pollModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span>Poll</span> Question</h2>
+            <button class="modal-close" id="closePollModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="pollQuestion" class="poll-question">
+                <!-- Poll question will be inserted here -->
+            </div>
+
+            <div class="poll-options" id="pollOptions">
+                <!-- Poll options will be inserted here -->
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="post-btn" id="submitPollAnswer">Submit</button>
+        </div>
+    </div>
+</div>

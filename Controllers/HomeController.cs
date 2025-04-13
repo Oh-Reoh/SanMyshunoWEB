@@ -38,6 +38,8 @@ namespace WebApplication2.Controllers
         {
             return RedirectToAction("AdminHome");
         }
+
+        //Profiles for all users
         public IActionResult Profile()
         {
             return View();
@@ -72,10 +74,6 @@ namespace WebApplication2.Controllers
         }
 
         // STAFF
-        public IActionResult StaffHome()
-        {
-            return View();
-        }
 
         public IActionResult StaffPasses()
         {
@@ -88,6 +86,27 @@ namespace WebApplication2.Controllers
         }
 
         public IActionResult StaffTransactions()
+        {
+            return View();
+        }
+
+        //HOMEOWNER
+        public IActionResult HomeownerHome()
+        {
+            return View();
+        }
+
+        public IActionResult HomeownerFacilities()
+        {
+            return View();
+        }
+
+        public IActionResult HomeownerPasses()
+        {
+            return View();
+        }
+
+        public IActionResult HomeownerTransactions()
         {
             return View();
         }

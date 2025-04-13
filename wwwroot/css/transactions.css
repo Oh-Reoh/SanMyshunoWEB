@@ -1,7 +1,7 @@
 ﻿.transactions-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0; 
     font-family: 'Inter', sans-serif;
 }
 
@@ -11,55 +11,6 @@
     margin-bottom: 20px;
     position: relative;
 }
-
-.dropdown-wrapper {
-    position: relative;
-}
-
-.dropdown-toggle {
-    background-color: #C4C4C4;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    .dropdown-toggle img {
-        width: 18px;
-        height: 18px;
-    }
-
-.dropdown-menu {
-    position: absolute;
-    top: 45px;
-    right: 0;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    display: none;
-    flex-direction: column;
-    min-width: 120px;
-    z-index: 10;
-}
-
-    .dropdown-menu.show {
-        display: flex;
-    }
-
-.filter-option {
-    padding: 10px 16px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s;
-}
-
-    .filter-option:hover {
-        background-color: #f5f5f5;
-    }
 
 .transactions-list {
     display: flex;
@@ -71,12 +22,16 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
 }
 
 .transaction-details {
-    font-size: 14px;
-    color: #444;
+    font-size: 16px;
+    color: #666;
+}
+
+.bold {
+    color: black;
+    font-weight: bold;
 }
 
 .transaction-amount {

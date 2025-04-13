@@ -133,7 +133,6 @@
         padding: 6px 12px;
         font-size: 15px;
         border: 1px solid #ccc;
-        border-radius: 4px;
     }
 
 
@@ -142,7 +141,7 @@
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #333;
+    color: black;
     font-family: 'Inter', sans-serif;
 }
 

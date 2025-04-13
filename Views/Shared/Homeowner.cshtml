@@ -1,4 +1,80 @@
-﻿@page
-@model SanMyshunoWEB.Views.Shared.HomeownerModel
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Myshuno</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/Admin.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <script src="/js/dropDown.js"></script>
+    <script src="/js/activeClasses.js"></script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="/images/web-logo.png" alt="San Myshuno">
+            </div>
+        </div>
+        <div class="user-actions">
+            <button class="icon-button home-icon" id="homeIcon" onclick="window.location.href='/Home/HomeownerHome';">
+                <img src="/images/home-icon.png" alt="Home">
+            </button>
+            <div class="notification-wrapper">
+                <button class="icon-button" id="notificationToggle">
+                    <img src="/images/bell-icon.png" alt="Notifications">
+                </button>
+                <div id="notificationDropdown" class="notification-dropdown">
+                    <div id="notificationList">
+                        <div class="notification-item">
+                            <div class="notification-title">No new notifications</div>
+                            <div class="notification-date"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-icon" id="profileIcon">
+                <img src="/images/profile-icon.png" alt="Admin">
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-menu" id="userDropdownMenu">
+                    <a href="/Home/Profile" class="dropdown-item">Profile</a>
+                    <a href="/" class="dropdown-item">Log out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Side Navigation - Always Open -->
+        <nav class="side-navbar">
+            <a href="/Home/HomeownerFacilities" class="nav-item" id="facilityActive">
+                <div class="nav-icon"><img src="/images/facilities-icon.png" alt="Facilities"></div>
+                <span>Facilities</span>
+            </a>
+            <a href="/Home/HomeownerPasses" class="nav-item" id="passActive">
+                <div class="nav-icon"><img src="/images/passes-icon.png" alt="Passes"></div>
+                <span>Passes</span>
+            </a>
+            <a href="/Home/HomeownerServices" class="nav-item" id="servicesActive">
+                <div class="nav-icon"><img src="/images/services-icon.png" alt="Services"></div>
+                <span>Services</span>
+            </a>
+            <a href="/Home/HomeownerTransactions" class="nav-item" id="transactionsActive">
+                <div class="nav-icon"><img src="/images/transactions-icon.png" alt="Transactions"></div>
+                <span>Transactions</span>
+            </a>
+        </nav>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
