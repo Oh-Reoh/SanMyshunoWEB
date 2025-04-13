@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<link rel="stylesheet" href="/css/facilities.css">
+<script src="/js/facilityManagement.js"></script>
+
+<div class="admin-home-container">
+    <!-- Main Feed -->
+    <div class="feed-container full-width">
+        <div class="facilities-header">
+            <button class="add-facility-btn" id="addFacilityBtn">
+                <img src="/images/facility-icon.png" alt="Add Facility">
+            </button>
+        </div>
+        <!-- Facilities List -->
+        <div id="facilitiesList" class="list-container active">
+            <!-- Facilities will be added dynamically here -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Adding/Editing Facility -->
+<div class="modal-overlay" id="facilityModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title"><span id="modalAction">Add</span> a Facility</h2>
+            <button class="modal-close" id="facilityCloseModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="file-upload">
+                <label for="facilityImage">
+                    <div class="camera-icon">
+                        <img src="/images/camera-icon.png" alt="Upload Image">
+                    </div>
+                </label>
+                <input type="file" id="facilityImage" accept="image/*" />
+            </div>
+            <input type="text" id="facilityName" class="modal-input" placeholder="Facility Name" />
+            <input type="number" id="facilityPrice" class="modal-input" placeholder="Price per hour" />
+            <input type="text" id="facilityAddress" class="modal-input" placeholder="Address" />
+            <select id="facilityStatus" class="modal-input">
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+                <option value="Maintenance">Under Maintenance</option>
+            </select>
+            <span class="modal-error" id="facilityModalError">Please fill in all fields.</span>
+        </div>
+        <div class="modal-footer">
+            <button class="post-btn" id="facilitySubmit">Submit</button>
+        </div>
+    </div>
+</div>

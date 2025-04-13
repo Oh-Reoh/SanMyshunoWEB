@@ -35,7 +35,7 @@
         clearModal();
     });
 
-    // Form validation
+    // Form validation and staff addition
     const registerBtn = document.getElementById('registerSubmit');
     const errorMessage = document.getElementById('modalError');
 
@@ -43,6 +43,7 @@
         const name = document.getElementById('staffName');
         const contact = document.getElementById('staffContact');
         const dept = document.getElementById('staffDept');
+        const selectedDept = dept.value;
         const email = document.getElementById('staffEmail');
         const password = document.getElementById('staffPassword');
 
@@ -54,19 +55,49 @@
         } else {
             errorMessage.style.display = 'none';
             [name, contact, dept, email, password].forEach(input => input.classList.remove('error'));
-            // Placeholder: add staff logic
-            alert('Staff registered (placeholder)');
+
+            // Add staff to the staff list
+            const staffItem = document.createElement('div');
+            staffItem.classList.add('list-item');
+            staffItem.innerHTML = `
+                <div class="item-content">
+                    <div class="post-avatar">
+                        <img src="/images/profile-icon.png" alt="Staff">
+                    </div>
+                    <div class="item-details">
+                        <div class="item-name">${name.value}</div>
+                        <div class="item-info">${contact.value}</div>
+                        <div class="item-info">${dept.value}</div>
+                        <div class="item-info">${email.value}</div>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="delete-btn">
+                        <img src="/images/delete-icon.png" alt="Delete">
+                    </button>
+                </div>
+            `;
+
+            staffList.appendChild(staffItem);
+
+            // Attach event listener to the delete button of the newly added staff item
+            const deleteBtn = staffItem.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', function () {
+                staffItem.remove(); // Remove the staff item when the delete button is clicked
+            });
+
+            // Reset and close modal
             registerModal.classList.remove('active');
             clearModal();
         }
     });
 
     function clearModal() {
-        document.getElementById('nameInput').value = '';
-        document.getElementById('contactInput').value = '';
-        document.getElementById('departmentInput').value = '';
-        document.getElementById('emailInput').value = '';
-        document.getElementById('passwordInput').value = '';
+        document.getElementById('staffName').value = '';
+        document.getElementById('staffContact').value = '';
+        document.getElementById('staffDept').value = '';
+        document.getElementById('staffEmail').value = '';
+        document.getElementById('staffPassword').value = '';
         errorMessage.style.display = 'none';
         document.querySelectorAll('.modal-input').forEach(input => input.classList.remove('error'));
     }
@@ -75,6 +106,7 @@
     const deleteBtns = document.querySelectorAll('.delete-btn');
     const confirmBtns = document.querySelectorAll('.confirm-btn');
 
+    // Attach event listeners to existing delete buttons
     deleteBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const item = btn.closest('.list-item') || btn.closest('.request-item');

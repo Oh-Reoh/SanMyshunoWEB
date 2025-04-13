@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Myshuno</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/Admin.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <script src="/js/dropDown.js"></script>
+    <script src="/js/activeClasses.js"></script>
 </head>
 <body>
     <!-- Top Navigation Bar -->
@@ -17,19 +19,17 @@
             </div>
         </div>
         <div class="user-actions">
-            <button class="icon-button home-icon" onclick="window.location.href='/Home/AdminHome';">
+            <button class="icon-button home-icon" id="homeIcon" onclick="window.location.href='/Home/AdminHome';">
                 <img src="/images/home-icon.png" alt="Home">
             </button>
             <button class="icon-button">
                 <img src="/images/bell-icon.png" alt="Notifications">
             </button>
-            <div class="profile-icon">
+            <div class="profile-icon" id="profileIcon">
                 <img src="/images/profile-icon.png" alt="Admin">
             </div>
+
             <div class="dropdown">
-                <button class="dropdown-toggle" id="userDropdown">
-                    <img src="/images/dropdown-icon.png" alt="Dropdown">
-                </button>
                 <div class="dropdown-menu" id="userDropdownMenu">
                     <a href="/Admin/Profile" class="dropdown-item">Profile</a>
                     <a href="/" class="dropdown-item">Log out</a>
@@ -42,15 +42,15 @@
     <div class="main-container">
         <!-- Side Navigation - Always Open -->
         <nav class="side-navbar">
-            <a href="/Home/AdminUsers" class="nav-item">
+            <a href="/Home/AdminUsers" class="nav-item" id="usersActive">
                 <div class="nav-icon"><img src="/images/users-icon.png" alt="Users"></div>
                 <span>Users</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/Home/AdminFacilities" class="nav-item" id="facilityActive">
                 <div class="nav-icon"><img src="/images/facilities-icon.png" alt="Facilities"></div>
                 <span>Facilities</span>
             </a>
-            <a href="/Home/AdminPasses" class="nav-item">
+            <a href="/Home/AdminPasses" class="nav-item" id="passActive">
                 <div class="nav-icon"><img src="/images/passes-icon.png" alt="Passes"></div>
                 <span>Passes</span>
             </a>
@@ -61,10 +61,6 @@
             <a href="#" class="nav-item">
                 <div class="nav-icon"><img src="/images/files-icon.png" alt="Files"></div>
                 <span>Files</span>
-            </a>
-            <a href="#" class="nav-item">
-                <div class="nav-icon"><img src="/images/contacts-icon.png" alt="Contacts"></div>
-                <span>Contacts</span>
             </a>
             <a href="#" class="nav-item">
                 <div class="nav-icon"><img src="/images/transactions-icon.png" alt="Transactions"></div>
