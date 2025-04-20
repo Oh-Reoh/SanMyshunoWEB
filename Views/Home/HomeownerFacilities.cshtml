@@ -38,8 +38,8 @@
             </div>
 
             <div class="booking-form">
-                <h3>Select time</h3>
-                <div class="time-selection" style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <p class="select-time">Select time</p>
+                <div class="time-selection" style="display: flex; gap: 10px;">
                     <div style="flex: 1;">
                         <select id="timeFrom" class="modal-input">
                             <option value="">From</option>
@@ -78,24 +78,19 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 15px;">
-                    <input type="text" id="bookingDate" class="modal-input" placeholder="Select Date">
-                </div>
+                <input type="text" id="bookingDate" class="modal-input" placeholder="Select Date">
+           
 
-                <div style="margin-bottom: 5px;">
                     <select id="paymentMethod" class="modal-input">
                         <option value="">Payment Method</option>
                         <option value="credit">Gcash</option>
                         <option value="debit">PayMaya</option>
                     </select>
-                </div>
                 <div class="modal-error" id="bookingError">Please fill in all required fields</div>
 
-                <div class="total-section" style="margin: 20px 0; font-size: 18px;">
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Total:</span>
-                        <span id="totalAmount">₱0</span>
-                    </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span class="total">Total:</span>
+                    <span id="totalAmount">₱0</span>
                 </div>
             </div>
         </div>
