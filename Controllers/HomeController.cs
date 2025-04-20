@@ -110,5 +110,10 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
+
+        public IActionResult HomeownerServices()
+        {
+            return View();
+        }
     }
 }

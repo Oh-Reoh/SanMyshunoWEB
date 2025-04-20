@@ -219,3 +219,129 @@
     color: #666;
     font-size: 16px;
 }
+
+/* homeowner services styles */
+.homeowner-container {
+    position: relative;
+    padding-top: 10px;
+}
+
+.facility-request-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+    .facility-request-icon img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+.full-width {
+    width: 100%;
+}
+
+/* Pay Now Button */
+.pay-now-btn {
+    background-color: #e85a5a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .pay-now-btn:hover {
+        background-color: #d64545;
+    }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.service-details, .form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+    }
+
+#serviceDescription {
+    height: 80px;
+}
+
+#serviceType {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+}
+
+.pay-btn, .request-btn {
+    background-color: #e85a5a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+ 
+    .pay-btn:hover, .request-btn:hover {
+        background-color: #d64545;
+    }
+
+#submitPayment {
+    margin-top: 20px;
+}
