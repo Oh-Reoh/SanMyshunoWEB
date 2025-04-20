@@ -81,13 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Submit handlers
     document.getElementById('submitPayment').addEventListener('click', function () {
         // Handle payment submission
-        alert('Payment submitted successfully!');
         paymentModal.style.display = 'none';
     });
 
     document.getElementById('submitRequest').addEventListener('click', function () {
         // Handle service request submission
-        alert('Service request submitted successfully!');
         requestServiceModal.style.display = 'none';
     });
 });
