@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/reports.css" />
+}
+
+@section Scripts {
+    <script src="/js/reports.js"></script>
+}
+
+<div class="reports-container">
+    <div class="overview-heading">
+        <h4>Overview</h4>
+    </div>
+
+    <div class="header-section">
+        <div class="header-text">
+            <h2>See your app’s impact</h2>
+            <p>Keep track of your community’s users, services requests, payments, and community engagement</p>
+        </div>
+        <div class="stat-boxes">
+            <div class="stat-box"><strong>Admin</strong><p class="value">1</p></div>
+            <div class="stat-box"><strong>Staff</strong><p class="value">5</p></div>
+            <div class="stat-box"><strong>Homeowners</strong><p class="value">30</p></div>
+        </div>
+    </div>
+
+    <div class="report-cards">
+        <div class="report-card">
+            <h3>Services</h3>
+            <ul>
+                <li><span class="dot"></span> Requests <span class="count">2</span></li>
+                <li><span class="dot"></span> Upcoming <span class="count">1</span></li>
+                <li><span class="dot"></span> In Progress <span class="count">1</span></li>
+                <li><span class="dot"></span> Completed <span class="count">5</span></li>
+            </ul>
+        </div>
+
+        <div class="report-card">
+            <h3>Payments</h3>
+            <ul>
+                <li><span class="dot"></span> Total for Facility Bookings <span class="count">₱12000</span></li>
+                <li><span class="dot"></span> Total for Services <span class="count">₱2000</span></li>
+                <li><span class="dot"></span> Total Revenue <span class="count">₱14000</span></li>
+            </ul>
+        </div>
+
+        <div class="report-card">
+            <h3>Engagement</h3>
+            <ul>
+                <li><span class="dot"></span> Total comments <span class="count">3</span></li>
+                <li><span class="dot"></span> Total polls/surveys answers <span class="count">3</span></li>
+            </ul>
+        </div>
+    </div>
+</div>

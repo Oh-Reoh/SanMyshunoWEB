@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+@RenderSection("Styles", required: false)
+@RenderSection("Scripts", required: false)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,6 +74,10 @@
             <a href="/Home/AdminTransactions" class="nav-item" id="transactionsActive">
                 <div class="nav-icon"><img src="/images/transactions-icon.png" alt="Transactions"></div>
                 <span>Transactions</span>
+            </a>
+            <a href="/Home/AdminReports" class="nav-item" >
+                <div class="nav-icon"><img src="/images/reports-icon.png" alt="Reports"></div>
+                <span>Reports</span>
             </a>
         </nav>
 

@@ -73,6 +73,11 @@ namespace WebApplication2.Controllers
             return View();
         }
 
+        public IActionResult AdminReports()
+        {
+            return View();
+        }
+
         // STAFF
 
         public IActionResult StaffPasses()
@@ -90,6 +95,7 @@ namespace WebApplication2.Controllers
             return View();
         }
 
+        //HEAD
         //HOMEOWNER
         public IActionResult HomeownerHome()
         {
